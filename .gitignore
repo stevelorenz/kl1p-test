@@ -1,0 +1,40 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+test-cs
+/tests/test
+
+# Temp dirs
+/csv_matrix
+/tmp_results
+/tests
+
+# Temp files
+/rsc/sensingMatrixResized.csv
+/py_scripts/plots/mse/*.png
+/py_scripts/plots/success/*.png
+/py_scripts/plots/runtime/*.png

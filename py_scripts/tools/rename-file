@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# ###############################################################
+# About  : Rename files(rename file for different snr)
+# Date   : 2016-02-20 10:01:34
+# ###############################################################
+
+from os import rename, path, listdir
+import sys
+
+snr = str(sys.argv[1])
+snr = snr + "db"
+
+work_dir = "../test_results/new_sesm/pc/snr_"
+work_dir = work_dir + snr
+
+file_list = listdir(work_dir)
+
+for file in file_list:
+    old_name = file.split('.')
+    new_name = old_name[0] + '_' + snr + '.csv'
+    rename(path.join(work_dir, file), path.join(work_dir, new_name))
+
+print("rename files in %s finished .." % work_dir)

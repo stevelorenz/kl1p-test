@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# ###############################################################
+# About  : Change the first line of the file
+# Date   : 2016-02-22 12:03:36
+# ###############################################################
+
+from os import listdir
+from os import path
+
+des_dir = "../test_results/new_sesm/pc/snr_00db/"
+src_dir = "../tmp_results/"
+
+src_files = listdir(src_dir)
+
+for file in src_files:
+    src_pointer = open(path.join(src_dir, file))
+    src_lines = src_pointer.readlines()
+
+    des_pointer = open(path.join(des_dir, file))
+    des_lines = des_pointer.readlines()
+    des_lines[0] = src_lines[0]
+
+    des_pointer = open(path.join(des_dir, file), 'w+')
+    des_pointer.writelines(des_lines)
+
+    src_pointer.close()
+    des_pointer.close()
