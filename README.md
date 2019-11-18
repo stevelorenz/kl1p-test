@@ -17,9 +17,9 @@ In this evalution programm, the library kl1p is used for testing three commen co
 
 ### steps for building
 
-1. build the armadillo libraries, details see the REAME.txt of armadillo
+1. build the armadillo libraries, details see the README.txt of armadillo
 
-2. build kl1p static libraries(.a files), details is in REAME.txt in ./kl1p_0.4.2
+2. build kl1p static libraries(.a files), details is in README.txt in ./kl1p_0.4.2
 
 3. use make to build the programm
     * put static libraries in the root dir of programm(default in makefile)
